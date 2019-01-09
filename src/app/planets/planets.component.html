@@ -1,0 +1,34 @@
+<p>
+  planets works!
+
+  {{ _name }}
+</p>
+
+<div>
+
+<ng-container *ngIf="planets$; then list; else loading ">
+</ng-container>
+
+<ng-template #list>
+<ul>
+  <li *ngFor="let planet of planets$">
+  {{ planet.name }}
+  </li>
+</ul>
+</ng-template>
+
+<ng-template #loading>
+
+<ng-container *ngIf="err$; then er; else waiting">
+</ng-container>
+
+<ng-template #er>
+<div>Sorry, smth went wrong :(</div>
+</ng-template>
+
+<ng-template #waiting>
+<div>LOADING...</div>
+</ng-template>
+</ng-template>
+
+</div>
