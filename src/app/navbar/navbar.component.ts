@@ -7,7 +7,7 @@ import { Component, OnInit, Input } from "@angular/core";
 })
 export class NavbarComponent implements OnInit {
   @Input()
-  num: number;
+  num: number; // acquired from parent in html file
 
   constructor() {}
 
